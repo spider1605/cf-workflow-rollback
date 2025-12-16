@@ -35,6 +35,10 @@
     "durable"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dmmulroy/cf-workflow-rollback"
+  },
   "peerDependencies": {
     "@cloudflare/workers-types": ">=4.0.0"
   },
