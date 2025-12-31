@@ -11,7 +11,7 @@ export type RollbackHandler<T> = Readonly<{
   /** The step function to execute */
   run: () => Promise<T>;
   /** The undo function to call if a later step fails */
-  undo: (err: unknown, value: Serializable<T>) => Promise<void>;
+  undo: (err: unknown, value: T) => Promise<void>;
 }>;
 
 /**
@@ -99,7 +99,7 @@ export function withRollback(workflowStep: WorkflowStep): RollbackContext {
       name,
       execute: (error: unknown) =>
         workflowStep.do(`Undo '${name}'`, undoConfig, async () =>
-          handler.undo(error, result),
+          handler.undo(error, result as T),
         ),
     });
 
@@ -137,14 +137,14 @@ export function withRollback(workflowStep: WorkflowStep): RollbackContext {
     ): Promise<Serializable<T>> =>
       fn
         ? workflowStep.do(
-            name,
-            configOrFn as WorkflowStepConfig,
-            fn as () => Promise<Serializable<T>>,
-          )
+          name,
+          configOrFn as WorkflowStepConfig,
+          fn as () => Promise<Serializable<T>>,
+        )
         : workflowStep.do(
-            name,
-            configOrFn as () => Promise<Serializable<T>>,
-          )) as WorkflowStep["do"],
+          name,
+          configOrFn as () => Promise<Serializable<T>>,
+        )) as WorkflowStep["do"],
     /** Execute a step with a rollback handler */
     doWithRollback: doWithRollback,
     /** Execute all registered undo handlers in LIFO order */
