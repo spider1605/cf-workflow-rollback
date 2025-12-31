@@ -46,7 +46,11 @@ export type RollbackStepConfig = WorkflowStepConfig & {
  */
 export type RollbackContext = {
   /** The original step.do method */
-  do: WorkflowStep["do"];
+  do: <T>(
+    name: string,
+    configOrFn: WorkflowStepConfig | (() => Promise<T>),
+    fn?: () => Promise<T>,
+  ) => Promise<Serializable<T>>;
   /** Execute a step with a rollback handler */
   doWithRollback: <T>(
     name: string,
@@ -149,7 +153,7 @@ export function withRollback(workflowStep: WorkflowStep): RollbackContext {
 
   return {
     /** The original step.do method (wrapped to avoid RPC bind issues) */
-    do: (<T>(
+    do: <T>(
       name: string,
       configOrFn: WorkflowStepConfig | (() => Promise<T>),
       fn?: () => Promise<T>,
@@ -164,7 +168,7 @@ export function withRollback(workflowStep: WorkflowStep): RollbackContext {
             name,
             configOrFn as () => Promise<Rpc.Serializable<T>>,
           )
-      ) as Promise<Serializable<T>>) as WorkflowStep["do"],
+      ) as Promise<Serializable<T>>,
     /** Execute a step with a rollback handler */
     doWithRollback: doWithRollback,
     /** Execute all registered undo handlers in LIFO order */
